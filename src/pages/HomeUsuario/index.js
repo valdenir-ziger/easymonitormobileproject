@@ -3,12 +3,12 @@ import OptionHome from '../../components/OptionHome';
 import HeaderDrawer from '../../components/HeaderDrawer';
 import {Container, ContainerText, TextUser} from './styles';
 
-const Home = () => {
+const HomeUsuario = () => {
   return (
     <>
       <HeaderDrawer title="EasyMonitor" />
       <ContainerText>
-        <TextUser>Olá!</TextUser>
+        <TextUser>Olá Usuário!</TextUser>
       </ContainerText>
       <Container>
         <OptionHome
@@ -28,4 +28,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default HomeUsuario;

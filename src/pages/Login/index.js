@@ -35,10 +35,16 @@ const Login = () => {
 
   function loginValidate() {
     if (user.trim() === 'monitor' && password.trim() == '123') {
-      navigation.navigate('Home');
+      navigation.navigate('HomeMonitor');
       setError(false);
       clearForm();
-    } else {
+    } 
+    else if (user.trim() === 'usuario' && password.trim() == '123') {
+      navigation.navigate('HomeUsuario');
+      setError(false);
+      clearForm();
+    }
+    else {
       setError(true);
     }
   }
