@@ -19,8 +19,7 @@ export const Logo = styled.Image`
 
 export const TextLogin = styled.Text`
   font-size: 26px;
-  fontWeight: bold;
-  color: #643CB4;
+  color: #2e3e5c;
   margin-bottom: 12px;
   left: 4px;
 `;

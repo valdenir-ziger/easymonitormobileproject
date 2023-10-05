@@ -9,6 +9,7 @@ export const Button = styled.TouchableOpacity`
 `;
 
 export const Text = styled.Text`
-  color: #2e3e5c;
+  color: #643CB4;
   font-size: 17px;
+  fontWeight: bold;
 `;

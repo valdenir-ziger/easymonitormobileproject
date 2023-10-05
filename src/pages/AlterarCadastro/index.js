@@ -13,7 +13,7 @@ import {
   TextInput,
 } from './styles';
 
-const Login = () => {
+const AlterarCadastro = () => {
   const navigation              = useNavigation();
   const [user, setUser]         = useState('');
   const [password, setPassword] = useState('');
@@ -32,24 +32,8 @@ const Login = () => {
 
   //----------------------------------------------------------------------------
 
-  function loginValidate() {
-    if (user.trim() === 'monitor' && password.trim() == '123') {
-      navigation.navigate('HomeMonitor');
-      setError(false);
-      clearForm();
-    } 
-    else if (user.trim() === 'usuario' && password.trim() == '123') {
-      navigation.navigate('HomeUsuario');
-      setError(false);
-      clearForm();
-    }
-    else {
-      setError(true);
-    }
-  }
-
-  function NovoCadastro() {
-      navigation.navigate('NovoCadastro');
+  function Login() {
+      navigation.navigate('Login');
       setError(false);
       clearForm();
   }
@@ -66,7 +50,7 @@ const Login = () => {
             <ContainerInput>
               <TextInput
                 placeholder="Usuário"
-                placeholderTextColor="#643CB4"
+                placeholderTextColor="#9FA5C0"
                 autoCapitalize="none"
                 autoCorrect={false}
                 maxLength={35}
@@ -79,7 +63,7 @@ const Login = () => {
             <ContainerInput>
               <TextInput
                 placeholder="Senha"
-                placeholderTextColor="#643CB4"
+                placeholderTextColor="#9FA5C0"
                 autoCapitalize="none"
                 autoCorrect={false}
                 maxLength={35}
@@ -89,9 +73,9 @@ const Login = () => {
                 onChangeText={t => setPassword(t)}
               />
             </ContainerInput>
-            <PrimaryButton title={'Entrar'} fn={loginValidate} />
-            <SecundaryButton title={'Registrar - se'} fn={NovoCadastro} />
-            {error && <TextError>Usuário e/ou senha inválido(s)</TextError>}
+            <PrimaryButton title={'Criar Contra'} fn={Login} />
+            <SecundaryButton title={'Inicio'} fn={Login} />
+            {error && <TextError>Dados inválido(s)</TextError>}
           </View>
         </Container>
       </TouchableWithoutFeedback>
@@ -99,4 +83,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default AlterarCadastro;

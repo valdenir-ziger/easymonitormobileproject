@@ -9,8 +9,8 @@ export const Container = styled.View`
 
 export const Logo = styled.Image`
   align-self: center;
-  margin-top: 20%;
-  margin-bottom: 8%;
+  margin-top: 2%;
+  margin-bottom: 2%;
   max-width: 120px;
   min-width: 80px;
   max-height: 120px;
