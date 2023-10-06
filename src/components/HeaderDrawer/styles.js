@@ -1,7 +1,7 @@
 import styled from 'styled-components/native';
 
 export const Container = styled.View`
-  background-color: #fdfdfd;
+  background-color: #643CB4;
   flex-direction: row;
   align-items: center;
   border-bottom-width: 1px;
@@ -15,6 +15,9 @@ export const MenuButton = styled.TouchableOpacity`
 
 export const Title = styled.Text`
   font-size: 19px;
-  color: #2e3e5c;
+  color: #ffffff;
+  fontWeight: bold;
   margin: 12px;
+  background-color:#643CB4;
+  align-items: center;
 `;

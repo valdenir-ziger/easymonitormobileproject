@@ -7,28 +7,37 @@ export const Container = styled.View`
   background-color: #fff3c2;
 `;
 
-export const Logo = styled.Image`
-  align-self: center;
-  margin-top: 20%;
-  margin-bottom: 8%;
-  max-width: 120px;
-  min-width: 80px;
-  max-height: 120px;
-  min-height: 80px;
+export const ContainerText = styled.View`
+  margin-left: 24px;
+  margin-right: 24px;
+  margin-top: 16px;
+  margin-bottom: 16px;
 `;
 
-export const TextLogin = styled.Text`
+export const Quadrado = styled.Image`
+  align-self: center;
+  height: 200px;
+  width: 200px;
+  margin-bottom: 1px;
+  margin-left: 5px;
+  border-radius: 15px;
+  border-width: 2px;
+`;
+
+export const TextUser = styled.Text.attrs({
+  numberOfLines: 1,
+})`
   font-size: 26px;
-  color: #2e3e5c;
-  margin-bottom: 12px;
-  left: 4px;
+  color: #643CB4;
+  fontWeight: bold;
 `;
 
-export const TextError = styled.Text`
-  color: red;
-  font-size: 17px;
-  align-self: center;
-  top: 8px;
+export const TextInput = styled.TextInput`
+  flex: 1;
+  font-size: 19px;
+  height: 52px;
+  padding-left: 12px;
+  color: #2e3e5c;
 `;
 
 export const ContainerInput = styled.View`
@@ -41,13 +50,5 @@ export const ContainerInput = styled.View`
   border-width: 1px;
   border-color: #d0dbea;
   background-color: #fff;
-  color: #2e3e5c;
-`;
-
-export const TextInput = styled.TextInput`
-  flex: 1;
-  font-size: 19px;
-  height: 52px;
-  padding-left: 12px;
   color: #2e3e5c;
 `;

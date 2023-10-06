@@ -8,20 +8,20 @@ const HomeMonitor = () => {
     <>
       <HeaderDrawer title="EasyMonitor" />
       <ContainerText>
-        <TextUser>Olá Monitor!</TextUser>
+        <TextUser>Olá, Monitor!</TextUser>
       </ContainerText>
       <Container>
         <OptionHome
-          option={null}
-          screen={null}
-          icon="document-text"
-          title="Agendar Monitoria"
+          screen="AlterarCadastro"
+          title="Dados Pessoais"
         />
         <OptionHome
-          option={null}
-          screen="Login"
-          icon="document-text"
-          title="Sair"
+          screen="CadastrarMonitoria"
+          title="Nova Monitoria"
+        />
+        <OptionHome
+          screen="GerenciarMonitoria"
+          title="Gerenciar Monitoria(s)"
         />
       </Container>
     </>

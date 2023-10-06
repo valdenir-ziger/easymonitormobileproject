@@ -1,31 +1,31 @@
-import React from 'react';
-import OptionHome from '../../components/OptionHome';
-import HeaderDrawer from '../../components/HeaderDrawer';
-import {Container, ContainerText, TextUser} from './styles';
+import React                                       from 'react';
+import {Keyboard, TouchableWithoutFeedback, View}  from 'react-native';
+import HeaderDrawer                                from '../../components/HeaderDrawer';
+import OptionMonitoria                             from '../../components/OptionMonitoria';
 
-const HomeUsuario = () => {
+import {ContainerText, 
+        TextUser, 
+        Container
+      } from './styles';
+
+const GerenciarMonitoria = () => {
+
   return (
     <>
       <HeaderDrawer title="EasyMonitor" />
-      <ContainerText>
-        <TextUser>Olá Usuário!</TextUser>
-      </ContainerText>
-      <Container>
-        <OptionHome
-          option={null}
-          screen={null}
-          icon="document-text"
-          title="Agendar Monitoria"
-        />
-        <OptionHome
-          option={null}
-          screen="Login"
-          icon="document-text"
-          title="Sair"
-        />
-      </Container>
-    </>
+      <TouchableWithoutFeedback onPress={() => Keyboard.dismiss()}>
+        <Container>
+          <View style={{width: '90%', alignSelf: 'center'}}>
+              <ContainerText>
+                <TextUser>Gerenciar Monitoria</TextUser>
+              </ContainerText>
+              <OptionMonitoria nome="Aluno 1" formacao="1º Período" diponibilidade="Seg, Terça"/>
+              <OptionMonitoria nome="Aluno 2" formacao="2º Período" diponibilidade="Qua, Qui"/>
+          </View>
+        </Container>
+      </TouchableWithoutFeedback>
+    </>       
   );
 };
 
-export default HomeUsuario;
+export default GerenciarMonitoria;

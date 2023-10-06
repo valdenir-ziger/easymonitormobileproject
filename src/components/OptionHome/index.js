@@ -1,9 +1,10 @@
-import React from 'react';
-import { useNavigation } from '@react-navigation/native';
-import IonIcon from 'react-native-vector-icons/Ionicons';
-import { ButtonOption, TextOption } from './styles';
+import React                        from 'react';
+import { useNavigation }            from '@react-navigation/native';
+import topico                       from '../../assets/topico.png';
+import setaDireita                  from '../../assets/seta_direita.png';
+import { ButtonOption, TextOption, Icone, SetaDireita } from './styles';
 
-const OptionHome = ({ screen, icon, title }) => {
+const OptionHome = ({ screen, title }) => {
   const navigation = useNavigation();
 
   const onClickOption = () => {
@@ -13,9 +14,9 @@ const OptionHome = ({ screen, icon, title }) => {
   return (
     <>
       <ButtonOption onPress={onClickOption}>
-        <IonIcon name={icon} size={38} color="#2E3E5C" />
+        <Icone source={topico} />
         <TextOption>{title}</TextOption>
-        <IonIcon name="chevron-forward" size={28} color="#2E3E5C" />
+        <SetaDireita source={setaDireita} />
       </ButtonOption>
     </>
   );

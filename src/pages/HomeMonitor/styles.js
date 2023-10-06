@@ -12,9 +12,9 @@ export const ContainerText = styled.View`
   margin-bottom: 16px;
 `;
 
-export const TextUser = styled.Text.attrs({
-  numberOfLines: 1,
+export const TextUser = styled.Text.attrs({numberOfLines: 1,
 })`
   font-size: 26px;
-  color: #2e3e5c;
+  color: #643CB4;
+  fontWeight: bold;
 `;

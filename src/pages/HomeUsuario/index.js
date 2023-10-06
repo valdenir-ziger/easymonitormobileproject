@@ -8,20 +8,12 @@ const HomeUsuario = () => {
     <>
       <HeaderDrawer title="EasyMonitor" />
       <ContainerText>
-        <TextUser>Olá Usuário!</TextUser>
+        <TextUser>Olá, Usuário!</TextUser>
       </ContainerText>
       <Container>
         <OptionHome
-          option={null}
-          screen={null}
-          icon="document-text"
+          screen="SelecionarMateria"
           title="Agendar Monitoria"
-        />
-        <OptionHome
-          option={null}
-          screen="Login"
-          icon="document-text"
-          title="Sair"
         />
       </Container>
     </>
