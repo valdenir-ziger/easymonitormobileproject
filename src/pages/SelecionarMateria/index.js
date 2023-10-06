@@ -2,7 +2,7 @@ import React                                       from 'react';
 import {Keyboard, TouchableWithoutFeedback, View}  from 'react-native';
 import HeaderDrawer                                from '../../components/HeaderDrawer';
 import OptionMonitor                               from '../../components/OptionMonitor';
-import SelectList                                  from '../../components/SelectList';
+import Picker                                      from '../../components/Picker';
 
 import {ContainerText, 
         TextUser, 
@@ -22,12 +22,18 @@ const SelecionarMateria = () => {
                 <TextUser>O que vamos estudar?</TextUser>
               </ContainerText>
               <ContainerInput>
-                <SelectList
-                  placeholder="Selecione uma Matéria"
-                /> 
+                <Picker/> 
               </ContainerInput>
-              <OptionMonitor nome="Monitor 1" formacao="1º Período" diponibilidade="Seg, Terça"/>
-              <OptionMonitor nome="Monitor 2" formacao="2º Período" diponibilidade="Qua, Qui"/>
+              <OptionMonitor 
+                nome="Monitor 1" 
+                formacao="1º Período" 
+                diponibilidade="Seg, Terça"
+                screen="DetalheMonitor"/>
+              <OptionMonitor 
+                nome="Monitor 2" 
+                formacao="2º Período" 
+                diponibilidade="Qua, Qui"
+                screen="DetalheMonitor"/>
           </View>
         </Container>
       </TouchableWithoutFeedback>

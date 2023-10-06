@@ -6,7 +6,7 @@ export const Container = styled.View`
 `;
 
 export const ContainerText = styled.View`
-  margin-left: 24px;
+  margin-left: 5px;
   margin-right: 24px;
   margin-top: 16px;
   margin-bottom: 16px;
@@ -27,14 +27,13 @@ export const TextInput = styled.TextInput`
 `;
 
 export const ContainerInput = styled.View`
-  justify-content: center;
-  height: 52px;
-  margin-bottom: 16px;
-  padding-left: 8px;
-  padding-right: 8px;
+  justify-content: left;
+  height: 9%;
+  width: 100%;
+  margin-bottom: 15px;
+  padding-left: 1px;
   border-radius: 4px;
-  border-width: 1px;
-  border-color: #d0dbea;
-  background-color: #fff;
-  color: #2e3e5c;
+  border-width: 2px;
+  border-color:  #643CB4;
+  background-color: #fff3c2;
 `;

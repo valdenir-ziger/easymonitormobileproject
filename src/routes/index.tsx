@@ -10,7 +10,6 @@ import CadastrarMonitoria from '../pages/CadastrarMonitoria';
 import DetalheMonitor     from '../pages/DetalheMonitor';
 import GerenciarMonitoria from '../pages/GerenciarMonitoria';
 import SelecionarMateria  from '../pages/SelecionarMateria';
-import SelecionarMonitor  from '../pages/SelecionarMonitor';
 
 const Routes = () => {
   const Stack = createStackNavigator();
@@ -28,7 +27,6 @@ const Routes = () => {
       <Stack.Screen name="DetalheMonitor"     component={DetalheMonitor} />
       <Stack.Screen name="GerenciarMonitoria" component={GerenciarMonitoria} />
       <Stack.Screen name="SelecionarMateria"  component={SelecionarMateria} />
-      <Stack.Screen name="SelecionarMonitor"  component={SelecionarMonitor} />
     </Stack.Navigator>
   );
 };

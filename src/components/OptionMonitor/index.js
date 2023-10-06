@@ -2,6 +2,7 @@ import React             from 'react';
 import graduation_cap    from '../../assets/graduation_cap.png';
 import calendar          from '../../assets/calendar.png';
 import imagem            from '../../assets/foto.png';
+import { useNavigation } from '@react-navigation/native';
 
 import { 
   ButtonOption, 
@@ -14,10 +15,17 @@ import {
   TextDisponibilidade
  } from './styles';
 
-const OptionMonitor = ({nome, formacao, diponibilidade }) => {
+const OptionMonitor = ({nome, formacao, diponibilidade, screen }) => {
+  
+  const navigation = useNavigation();
+
+  const onClickOption = () => {
+    navigation.navigate(`${screen}`);
+  };
+
   return (
     <>
-      <ButtonOption>
+      <ButtonOption onPress={onClickOption}>
         <Foto source={imagem} />
         <TextOption>{nome}</TextOption>
         <ButtonOptionColumn>
