@@ -1,76 +1,53 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+Esse projeto foi desenvolvido usando [**React Native**](https://reactnative.dev) 
 
-# Getting Started
+# EasyMonitor
 
->**Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
+A solução provê, para escolas e universidades, a conexão entre monitores e pessoas que buscam monitoria simples e objetiva.
+Nossa plataforma permite que o monitor detalhe e organize sua monitoria em relação a horários, duração, conteúdo, didática, modalidade (online e/ou presencial) e se será monetizada ou gratuita. Além disso, a agenda de horários do monitor é disponibilizada para os alunos e pode ser customizado pelo monitor. Assim, cada um consegue ofertar um serviço único e personalizado que atenderá as diversas necessidades dos alunos de forma assertiva e eficiente.
+Com relação a quem procura por um monitor, a plataforma permite que a busca seja filtrada por necessidades de conteúdo, como: explicação do conteúdo, tirar dúvidas, resolução de exercícios... Ademais, o aluno consegue visualizar a agenda do monitor e combinar um horário e modalidade que atenda a ambos.
 
-## Step 1: Start the Metro Server
+# Protótipos de telas
+Tela Inicial
 
-First, you will need to start **Metro**, the JavaScript _bundler_ that ships _with_ React Native.
+![Inicio](https://github.com/valdenir-ziger/easymonitormobileproject/assets/95504751/3a5fbf08-73e9-461b-98b7-2d6a4b19a5b0)
 
-To start Metro, run the following command from the _root_ of your React Native project:
+Tela de Login
 
-```bash
-# using npm
-npm start
+![Login](https://github.com/valdenir-ziger/easymonitormobileproject/assets/95504751/1b68fb36-1051-41e9-a3f2-da3ec7df05d1)
 
-# OR using Yarn
-yarn start
-```
+Tela de Cadastro
 
-## Step 2: Start your Application
+![Cadastro](https://github.com/valdenir-ziger/easymonitormobileproject/assets/95504751/4affc1ff-93cb-4b95-b8b7-24fce7e549af)
 
-Let Metro Bundler run in its _own_ terminal. Open a _new_ terminal from the _root_ of your React Native project. Run the following command to start your _Android_ or _iOS_ app:
+Inicial Aluno
 
-### For Android
+![Home Aluno](https://github.com/valdenir-ziger/easymonitormobileproject/assets/95504751/55172c75-85cb-4008-ad4c-54afa2d3bbdc)
 
-```bash
-# using npm
-npm run android
+Inicial Monitor
 
-# OR using Yarn
-yarn android
-```
+![Home Monitor](https://github.com/valdenir-ziger/easymonitormobileproject/assets/95504751/f42e0944-cdee-4273-bd56-c8046c31a1e3)
 
-### For iOS
+Procurar Monitoria
 
-```bash
-# using npm
-npm run ios
+![Buscar monitoria - monitor](https://github.com/valdenir-ziger/easymonitormobileproject/assets/95504751/f0e9c98d-57f5-4dc8-ad0d-f5f2a2b3286c)
 
-# OR using Yarn
-yarn ios
-```
+Cadastrar Monitoria
 
-If everything is set up _correctly_, you should see your new app running in your _Android Emulator_ or _iOS Simulator_ shortly provided you have set up your emulator/simulator correctly.
+![Nova Monitoria](https://github.com/valdenir-ziger/easymonitormobileproject/assets/95504751/f3e00d60-97c1-4855-b9e1-7c338a18a693)
 
-This is one way to run your app — you can also run it directly from within Android Studio and Xcode respectively.
+Gerenciar Monitoria
 
-## Step 3: Modifying your App
+![Gerenciar Monitoria](https://github.com/valdenir-ziger/easymonitormobileproject/assets/95504751/02951cad-5066-456b-a378-62fb6e0ccf99)
 
-Now that you have successfully run the app, let's modify it.
 
-1. Open `App.tsx` in your text editor of choice and edit some lines.
-2. For **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Developer Menu** (<kbd>Ctrl</kbd> + <kbd>M</kbd> (on Window and Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (on macOS)) to see your changes!
+Dados do Monitor
 
-   For **iOS**: Hit <kbd>Cmd ⌘</kbd> + <kbd>R</kbd> in your iOS Simulator to reload the app and see your changes!
+![Dados Pessoais Monitor](https://github.com/valdenir-ziger/easymonitormobileproject/assets/95504751/36933d9b-03c1-4714-b366-ac7bf164fff5)
 
-## Congratulations! :tada:
+Detalhes do Monitor
 
-You've successfully run and modified your React Native App. :partying_face:
+![Vizualizar monitor](https://github.com/valdenir-ziger/easymonitormobileproject/assets/95504751/8fa241bb-a790-4c0d-a4cb-6625d5a27f06)
 
-### Now what?
-
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [Introduction to React Native](https://reactnative.dev/docs/getting-started).
-
-# Troubleshooting
-
-If you can't get this to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
-
-# Learn More
-
-To learn more about React Native, take a look at the following resources:
 
 - [React Native Website](https://reactnative.dev) - learn more about React Native.
 - [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
