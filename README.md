@@ -1,7 +1,9 @@
 Esse projeto foi desenvolvido usando [**React Native**](https://reactnative.dev) 
 
 Execute **npm init -y** para gerar um pacote e automaticamente e aceitar todos os padrões.
-Execute **node src/AppServe** para iniciar a API de conexão com o BD.
+
+Execute **node src/AppServe** para iniciar a API de conexão com o BD e documentação.
+
 Execute **npm start** para iniciar o Aplicativo EasyMonitor.
 
 # EasyMonitor
@@ -52,6 +54,9 @@ Detalhes do Monitor
 
 ![Vizualizar monitor](https://github.com/valdenir-ziger/easymonitormobileproject/assets/95504751/8fa241bb-a790-4c0d-a4cb-6625d5a27f06)
 
+# Documentação da API
+
+![image](https://github.com/valdenir-ziger/easymonitormobileproject/assets/95504751/4629257d-72cb-4e23-adb0-f98e2e5fe68a)
 
 - [React Native Website](https://reactnative.dev) - learn more about React Native.
 - [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
