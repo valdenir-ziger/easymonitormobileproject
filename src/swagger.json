@@ -1,0 +1,310 @@
+{
+    "openapi": "3.0.3",
+    "in fo": {
+        "title": "API-EasyMonitor",
+        "description": "Essa API fornece recursos para persistência de Pessoas",
+        "contact": {
+            "name": "Valdenir Ziger",
+            "email": "valdenir@alunos.utfpr.edu.br"
+        },
+        "version": "1.0.0"
+    },
+    "servers": [
+        {
+            "url": "http://localhost:8080/api",
+            "description": "Rota para API"
+        }
+    ],
+    "paths": {
+        "/login": {
+            "post": {
+                "summary": "Efetua o Login",
+                "description": "Essa rota irá fazer o login no servidor",
+                "tags": [
+                    "Login"
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/Login"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Login realizado com sucesso!"
+                    },
+                    "401": {
+                        "description": "Login desativado!"
+                    },
+                    "404": {
+                        "description": "Login não encontrado!"
+                    }
+                }
+            }
+        },
+        "/cadastrarPessoa": {
+            "post": {
+                "summary": "Cadastro de Pessoas",
+                "description": "Essa rota irá cadastrar uma Pessoa",
+                "tags": [
+                    "Pessoas"
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/Pessoa"
+                            },
+                            "examples": {
+                                "Pessoa Como 'tipo' Administrador": {
+                                    "value": {
+                                        "login": "admin",
+                                        "senha": "admin",
+                                        "nome" : "Valdenir Ziger",
+                                        "curso"  : "Engenharia de SoftWare",
+                                        "periodo"  : "8º Período",
+                                        "email": "valdenir@alunos.utfpr.edu.br",
+                                        "tipo" : 0 
+                                    }
+                                },
+                                "Pessoa Como 'tipo' Monitor": {
+                                    "value": {
+                                        "login": "monitor",
+                                        "senha": "123",
+                                        "nome" : "Monitor 1",
+                                        "curso"  : "Engenharia de SoftWare",
+                                        "periodo"  : "8º Período",
+                                        "email": "valdenir@alunos.utfpr.edu.br",
+                                        "tipo" : 1 
+                                    }
+                                },
+                                "Pessoa Como 'tipo' Aluno": {
+                                    "value": {
+                                        "login": "usuario",
+                                        "senha": "123",
+                                        "nome" : "Usuario 1",
+                                        "curso"  : "Engenharia de SoftWare",
+                                        "periodo"  : "8º Período",
+                                        "email": "valdenir@alunos.utfpr.edu.br",
+                                        "tipo" : 2 
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Pessoa cadastrada com sucesso",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "$ref": "#/components/schemas/Pessoa"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/buscaPessoa/{id}": {
+            "get": {
+                "summary": "Busca pessoa pelo Id",
+                "description": "Essa rota irá buscar uma pessoa pelo ID.",
+                "tags": [
+                    "Pessoas"
+                ],
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "ID da pessoa no banco de dados.",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "$ref": "#/components/schemas/Pessoa"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/pessoas": {
+            "get": {
+                "summary": "Busca todas as pessoas",
+                "description": "Essa rota irá buscar todas as pessoas do banco",
+                "tags": [
+                    "Pessoas"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "401": {
+                        "description": "Efetue o login para acessar a funcionalidade"
+                    },
+                    "403": {
+                        "description": "Acesso não autorizado a essa a funcionalidade"
+                    }
+                }
+            }
+        },
+        "/deletarPessoa/{id}": {
+            "delete": {
+                "summary": "Deleta uma pessoa pelo ID",
+                "description": "Essa rota irá deletar uma pessoa pelo ID",
+                "tags": [
+                    "Pessoas"
+                ],
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "ID da pessoa no banco de dados.",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "$ref": "#/components/schemas/Pessoa"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/editarpessoa/{id}": {
+            "put": {
+                "summary": "Edita uma pessoa pelo ID",
+                "description": "Essa rota irá editar uma pessoa pelo ID",
+                "tags": [
+                    "Pessoas"
+                ],
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "ID da pessoa no banco de dados.",
+                        "required": true
+                    }
+                ],
+                "examples": {
+                    "Pessoa Como 'tipo' Administrador": {
+                        "value": {
+                            "login": "deno",
+                            "senha": "1234",
+                            "nome" : "Valdenir Ziger",
+                            "curso"  : "Engenharia de SoftWare",
+                            "periodo"  : "8º Período",
+                            "email": "valdenir@alunos.utfpr.edu.br",
+                            "tipo" : 0 
+                        }
+                    },
+                    "Pessoa Como 'tipo' Monitor": {
+                        "value": {
+                            "login": "deno",
+                            "senha": "1234",
+                            "nome" : "Valdenir Ziger",
+                            "curso"  : "Engenharia de SoftWare",
+                            "periodo"  : "8º Período",
+                            "email": "valdenir@alunos.utfpr.edu.br",
+                            "tipo" : 1 
+                        }
+                    },
+                    "Pessoa Como 'tipo' Aluno": {
+                        "value": {
+                            "login": "deno",
+                            "senha": "1234",
+                            "nome" : "Valdenir Ziger",
+                            "curso"  : "Engenharia de SoftWare",
+                            "periodo"  : "8º Período",
+                            "email": "valdenir@alunos.utfpr.edu.br",
+                            "tipo" : 2 
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "$ref": "#/components/schemas/Pessoa"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "Pessoa": {
+                "type": "object",
+                "properties": {
+                    "login": {
+                        "type: string": "deno",
+                        "example" : "deno"
+                    },
+                    "senha": {
+                        "type: string": "01234",
+                        "example" : "01234"
+                    },
+                    "nome": {
+                        "type: string": "Valdenir Ziger",
+                        "example" : "Valdenir Ziger"
+                    },
+                    "curso": {
+                        "type: string": "Engenharia de SoftWare",
+                        "example" : "Engenharia de SoftWare"
+                    },
+                    "periodo": {
+                        "type: string": "8º Período",
+                        "example" : "8º Período"
+                    },
+                    "email": {
+                        "type: string": "valdenir@alunos.utfpr.edu.br",
+                        "example" : "valdenir@alunos.utfpr.edu.br"
+                    },
+                    "tipo": {
+                        "type: integer": 0,
+                        "example" : 0
+                    }
+                }
+            },
+            "Login": {
+                "type": "object",
+                "properties": {
+                    "login": {
+                        "type: string" :"admin",
+                        "example" : "admin"
+                    },
+                    "senha": {
+                        "type: string": "admin",
+                        "example" : "admin"
+                    }
+                }
+            }
+        }
+    }
+}

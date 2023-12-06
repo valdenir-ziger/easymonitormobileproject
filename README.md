@@ -1,5 +1,9 @@
 Esse projeto foi desenvolvido usando [**React Native**](https://reactnative.dev) 
 
+Execute **npm init -y** para gerar um pacote e automaticamente e aceitar todos os padrões.
+Execute **node src/AppServe** para iniciar a API de conexão com o BD.
+Execute **npm start** para iniciar o Aplicativo EasyMonitor.
+
 # EasyMonitor
 
 A solução provê, para escolas e universidades, a conexão entre monitores e pessoas que buscam monitoria simples e objetiva.
