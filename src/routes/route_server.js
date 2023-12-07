@@ -2,8 +2,6 @@ const controllerAPI = require('../server/controllers/controllerAPI');
 const express       = require('express');
 const route         = express.Router();
 
-module.exports = route;
-
 route.get("/api", (req, res) => {
     console.log('Url: ' + req.url + ' - Método: ' + req.method + ' - Data: ' + new Date())
 
@@ -20,4 +18,9 @@ route.get("/api/buscapessoa/:id"     , controllerAPI.getPessoaById);
 route.get("/api/pessoas"             , controllerAPI.getPessoa);
 route.post("/api/cadastrarpessoa"    , controllerAPI.postPessoa);
 route.put('/api/editarpessoa/:id'    , controllerAPI.putPessoa);
-route.delete('/api/deletarpessoa/:id', controllerAPI.deletePessoa);
+
+// route.use('/', (req, res, next) => {
+//     res.status(404).json({error : "Essa Página Não Funciona"});
+// });
+
+module.exports = route;
