@@ -71,14 +71,28 @@ module.exports = {
     async postPessoa(req, res){
         console.log('Url: ' + req.url + ' - Método: ' + req.method + ' - Data: ' + new Date());
         var {login, senha, nome, curso, periodo, email, tipo} = req.body;
-        var tipo_descricao = "Aluno"; 
-        var ocultado       = false;
+
+        if(tipo == 'A' ){
+            tipo = 2;
+        }
+        else if(tipo == 'M'){
+            tipo = 1;
+        }
+        else{
+            tipo = 0;
+        }
+        
+        var tipo_descricao;
+        var ocultado = false;
 
         if(tipo == 0 ){
             tipo_descricao = "Administrador";
         }
         else if(tipo == 1){
             tipo_descricao = "Monitor";
+        }
+        else{
+            tipo_descricao = "Aluno";
         }
 
         const pessoas = new Pessoa({login, senha, nome, curso, periodo, email, tipo, tipo_descricao, ocultado});
